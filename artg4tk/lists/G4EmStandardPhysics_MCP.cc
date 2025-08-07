@@ -109,7 +109,7 @@ G4_DECLARE_PHYSCONSTR_FACTORY(G4EmStandardPhysics_MCP);
 //....oooOO0OOooo........oooOO0OOooo........oooOO0OOooo........oooOO0OOooo......
 
 G4EmStandardPhysics_MCP::G4EmStandardPhysics_MCP(G4int ver, const G4String&)
-  : G4VPhysicsConstructor("G4EmStandard"), verbose(ver)
+  : G4VPhysicsConstructor("G4EmStandardPhysics_MCP"), verbose(ver)
 {
   G4EmParameters* param = G4EmParameters::Instance();
   param->SetDefaults();
