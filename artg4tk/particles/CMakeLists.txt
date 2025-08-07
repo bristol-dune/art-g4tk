@@ -1,5 +1,6 @@
 cet_make_library(SOURCE
   G4PseudoLaser.cc
+  G4MCPPlus.cc
   LIBRARIES PUBLIC
   Geant4::G4global
   Geant4::G4particles
