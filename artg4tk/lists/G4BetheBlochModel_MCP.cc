@@ -86,6 +86,7 @@ G4BetheBlochModel_MCP::G4BetheBlochModel_MCP(const G4ParticleDefinition* p,
   theElectron = G4Electron::Electron();
   corr = G4LossTableManager::Instance()->EmCorrections();
   if(nullptr != p) { SetParticle(p); }
+  std::cout << "Using G4BetheBlochModel_MCP ..." << std::endl;
 }
 
 //....oooOO0OOooo........oooOO0OOooo........oooOO0OOooo........oooOO0OOooo......
@@ -263,6 +264,7 @@ G4double G4BetheBlochModel_MCP::ComputeDEDXPerVolume(const G4Material* material,
   dedx += corr->HighOrderCorrections(p,material,kineticEnergy,cutEnergy);
   dedx = std::max(dedx, 0.);
   return dedx;
+  std::cout << "Calculated de/dx from G4BBM_MCP" << std::endl;
 }
 
 //....oooOO0OOooo........oooOO0OOooo........oooOO0OOooo........oooOO0OOooo......
