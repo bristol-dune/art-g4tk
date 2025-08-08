@@ -155,7 +155,7 @@ void G4MCPIonisation::InitialiseEnergyLossProcess(const G4ParticleDefinition* pa
     if (!FluctModel()) { SetFluctModel(new G4UniversalFluctuation()); }
 
     // moderate energy model
-    if (!EmModel(1)) { SetEmModel(new G4BetheBlochModel()); }
+    if (!EmModel(1)) { SetEmModel(new G4BetheBlochModel_MCP()); }
     EmModel(1)->SetLowEnergyLimit(elow);
     EmModel(1)->SetHighEnergyLimit(ehigh);
     AddEmModel(2, EmModel(1), FluctModel());
